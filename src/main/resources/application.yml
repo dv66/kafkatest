@@ -1,0 +1,9 @@
+server:
+  port: 4321
+
+spring:
+  kafka:
+    bootstrapServers:
+      - localhost:9092
+    template:
+      defaultTopic: "testtopic"

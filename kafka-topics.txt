@@ -1,0 +1,47 @@
+
+
+# KAFKA commands
+================
+
+
+
+# start zookeeper
+=================
+sudo ./zookeeper-server-start.sh ../config/zookeeper.properties
+
+
+
+# start kafka
+==============
+sudo ./kafka-server-start.sh  ../config/server.properties
+
+
+# list of all topics
+====================
+sudo ./kafka-topics.sh --list --zookeeper localhost:2181
+
+
+# see all messages in a topic
+=============================
+sudo ./kafka-console-consumer.sh  --bootstrap-server localhost:9092 --topic testtopic --from-beginning
+
+
+# delete a topic (deleting topic is disabled by default)
+=========================================================
+https://stackoverflow.com/questions/24287900/delete-topic-in-kafka-0-8-1-1
+
+
+this will remove contents of a topic
+sudo ./kafka-topics.sh --delete --zookeeper localhost:2181 --topic testtopic
+
+
+
+
+
+
+
+
+
+
+
+
